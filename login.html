@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Issues Tracker — Sign In</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-[#f7f9fc] font-sans text-[#1d2939]">
+    <main class="flex min-h-screen items-center justify-center px-5 py-12">
+      <section class="w-full max-w-[520px] rounded-xl bg-white px-8 py-9 shadow-[0_4px_12px_rgba(16,24,40,0.12)]" aria-labelledby="login-title">
+        <header class="mb-7 text-center" id="header">
+          <div class="mx-auto mb-5 flex h-[100px] w-[100px] items-center justify-center rounded-full bg-[#1e293b] text-white" aria-hidden="true">
+            <svg class="h-18 w-18 fill-current" viewBox="0 0 16 16" role="img">
+              <path d="M8 0C3.58 0 0 3.67 0 8.2c0 3.62 2.29 6.68 5.47 7.77.4.08.55-.18.55-.4 0-.2-.01-.86-.01-1.56-2.23.5-2.7-.97-2.7-.97-.36-.95-.89-1.2-.89-1.2-.73-.51.05-.5.05-.5.81.06 1.23.85 1.23.85.72 1.26 1.89.9 2.35.69.07-.54.28-.9.51-1.1-1.78-.21-3.65-.92-3.65-4.07 0-.9.31-1.64.82-2.22-.08-.21-.36-1.05.08-2.18 0 0 .67-.22 2.2.85A7.4 7.4 0 0 1 8 3.7c.68 0 1.37.1 2.01.28 1.53-1.07 2.2-.85 2.2-.85.44 1.13.16 1.97.08 2.18.51.58.82 1.32.82 2.22 0 3.16-1.87 3.86-3.66 4.07.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .22.14.48.55.4A8.2 8.2 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z" />
+            </svg>
+          </div>
+          <h1 id="login-title" class="text-[25px] font-bold tracking-tight">GitHub Issues Tracker</h1>
+          <p class="mt-1 text-[16px] text-slate-500">Sign in to manage your issues</p>
+        </header>
+
+        <form id="login-form">
+          <fieldset class="mb-4 border-0 p-0">
+            <label class="mb-1 block text-[16px] font-medium text-[#182230]" for="username">Username</label>
+            <input id="username" name="username" class="input h-12 w-full rounded-lg border-[#d0d5dd] bg-white px-4 text-[16px] focus:border-violet-600 focus:outline-none" type="text" placeholder="Enter Username" autocomplete="username" />
+            <p class="mt-1 text-sm text-[#3e00ff]">Default: admin</p>
+          </fieldset>
+
+          <fieldset class="mb-5 border-0 p-0">
+            <label class="mb-1 block text-[16px] font-medium text-[#182230]" for="password">Password</label>
+            <input id="password" name="password" class="input h-12 w-full rounded-lg border-[#d0d5dd] bg-white px-4 text-[16px] focus:border-violet-600 focus:outline-none" type="password" placeholder="Enter Password" autocomplete="current-password" />
+            <p class="mt-1 text-sm text-[#3e00ff]">Default: admin123</p>
+          </fieldset>
+
+          <button class="btn h-12 w-full border-0 bg-[#4b00ff] text-[16px] font-semibold text-white shadow-none hover:bg-[#3e00d4]" id="submit-button" type="submit">Sign In</button>
+        </form>
+
+        <div class="divider my-6 text-sm text-[#182230]">OR</div>
+        <p class="mb-2 text-center text-sm text-slate-500">Demo Credentials:</p>
+        <div class="rounded-xl bg-[#f7f9fc] px-5 py-6 text-center text-[16px] leading-5">
+          <p><strong>Username:</strong> admin</p>
+          <p><strong>Password:</strong> admin123</p>
+        </div>
+      </section>
+    </main>
+
+
+    <script src="login.js"></script>
+  </body>
+</html>
