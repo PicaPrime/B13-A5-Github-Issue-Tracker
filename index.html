@@ -28,7 +28,7 @@
                         <circle cx="11" cy="11" r="7" />
                         <path d="m20 20-4-4" />
                     </svg><input type="search" placeholder="Search issues..." aria-label="Search issues" id="search-issues" /></label>
-                <button
+                <button id="new-issue-button" type="button"
                     class="btn h-11 border-0 bg-[#4b00ff] px-5 text-[16px] font-semibold text-white shadow-none hover:bg-[#3f00d7]">＋
                     New Issue</button>
             </div>
@@ -75,6 +75,41 @@
         </section>
     </main>
 
+    <dialog id="issue-modal" class="modal">
+        <div class="modal-box max-w-[700px] rounded-xl bg-white p-8 shadow-2xl">
+            <h2 id="modal-title" class="text-[25px] font-bold tracking-tight text-slate-800">Fix broken image uploads</h2>
+            <div class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-slate-500">
+                <span id="modal-status" class="rounded-full bg-emerald-500 px-2.5 py-1 font-semibold text-white">Opened</span>
+                <span>•</span>
+                <span id="modal-author">Opened by Fahim Ahmed</span>
+                <span>•</span>
+                <time id="modal-date" datetime="2026-02-22">22/02/2026</time>
+            </div>
+
+            <div id="modal-labels" class="mt-6 flex flex-wrap gap-2">
+                <span class="rounded-full border border-rose-200 bg-rose-50 px-2 py-1 text-xs font-medium text-rose-500">◉ BUG</span>
+                <span class="rounded-full border border-amber-200 bg-amber-50 px-2 py-1 text-xs font-medium text-amber-600">☹ HELP WANTED</span>
+            </div>
+
+            <p id="modal-description" class="mt-6 text-[16px] leading-6 text-slate-500">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+
+            <dl class="mt-6 grid grid-cols-1 gap-5 rounded-xl bg-slate-50 px-4 py-4 text-[16px] sm:grid-cols-2">
+                <div>
+                    <dt class="text-slate-500">Assignee:</dt>
+                    <dd id="modal-assignee" class="mt-1 font-semibold text-slate-800">Fahim Ahmed</dd>
+                </div>
+                <div>
+                    <dt class="text-slate-500">Priority:</dt>
+                    <dd class="mt-1"><span id="modal-priority" class="rounded-full bg-rose-500 px-4 py-1 text-sm font-medium text-white">HIGH</span></dd>
+                </div>
+            </dl>
+
+            <form method="dialog" class="mt-6 flex justify-end">
+                <button class="btn h-11 border-0 bg-[#4b00ff] px-6 text-[16px] font-semibold text-white shadow-none hover:bg-[#3f00d7]">Close</button>
+            </form>
+        </div>
+        <form method="dialog" class="modal-backdrop"><button aria-label="Close issue details">close</button></form>
+    </dialog>
 
 
    <script src="index.js"></script>
