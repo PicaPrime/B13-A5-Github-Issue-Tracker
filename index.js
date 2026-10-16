@@ -100,3 +100,16 @@ function createCard(data) {
                         ${data.author || "Unknown"}<br>${data.createdAt ? new Date(data.createdAt).toLocaleDateString() : ""}</footer>
                 </article>`;
 }
+
+let inputElement = document.getElementById("search-issues");
+
+inputElement.addEventListener("keyup", function () {
+  let searchedIssues = [];
+  allIssues.forEach((issue) => {
+    if(issue.title.toLowerCase().includes(inputElement.value.toLowerCase())){
+      searchedIssues.push(issue);
+    }
+  })
+
+  renderIssues('all', searchedIssues);
+});
