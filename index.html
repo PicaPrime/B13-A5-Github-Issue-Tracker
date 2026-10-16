@@ -39,12 +39,12 @@
         <nav class="mb-4 rounded-xl bg-white p-6 shadow-[0_2px_7px_rgba(15,23,42,.08)]"
             aria-label="Issue status filters">
             <div role="tablist" class="tabs tabs-box h-auto w-fit gap-2 bg-transparent p-0">
-                <a role="tab"
-                    class="tab h-10 min-w-28 rounded-md bg-[#4b00ff] text-[16px] font-semibold text-white">All</a>
-                <a role="tab"
-                    class="tab h-10 min-w-28 rounded-md border border-slate-200 bg-white text-[16px] font-medium text-slate-500">Open</a>
-                <a role="tab"
-                    class="tab h-10 min-w-28 rounded-md border border-slate-200 bg-white text-[16px] font-medium text-slate-500">Closed</a>
+                <button type="button" role="tab" aria-selected="true" data-tab="all"
+                    class="tab h-10 min-w-28 rounded-md bg-[#4b00ff] text-[16px] font-semibold text-white">All</button>
+                <button type="button" role="tab" aria-selected="false" data-tab="open"
+                    class="tab h-10 min-w-28 rounded-md border border-slate-200 bg-white text-[16px] font-medium text-slate-500">Open</button>
+                <button type="button" role="tab" aria-selected="false" data-tab="closed"
+                    class="tab h-10 min-w-28 rounded-md border border-slate-200 bg-white text-[16px] font-medium text-slate-500">Closed</button>
             </div>
         </nav>
 
@@ -71,160 +71,13 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 gap-3 p-6 sm:grid-cols-2 lg:grid-cols-4">
-                <article
-                    class="issue-card rounded-md border border-slate-200 border-t-[3px] border-t-emerald-500 bg-white shadow-sm">
-                    <div class="p-4">
-                        <div class="mb-3 flex items-center justify-between"><span
-                                class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-500">◌</span><span
-                                class="rounded-full bg-rose-100 px-5 py-1 text-xs font-medium text-rose-500">HIGH</span>
-                        </div>
-                        <h2 class="text-[14px] font-bold leading-5">Fix Navigation Menu On Mobile<br>Devices</h2>
-                        <p class="mt-2 text-xs leading-4 text-slate-500">The navigation menu doesn't
-                            collapse<br>properly on mobile devices...</p>
-                        <div class="mt-3 flex gap-1"><span
-                                class="rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-[11px] text-rose-500">◉
-                                BUG</span><span
-                                class="rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] text-amber-600">☹
-                                HELP WANTED</span></div>
-                    </div>
-                    <footer class="border-t border-slate-200 px-4 py-3 text-xs leading-6 text-slate-500">#1 by
-                        john_doe<br>1/15/2024</footer>
-                </article>
-                <article
-                    class="issue-card rounded-md border border-slate-200 border-t-[3px] border-t-emerald-500 bg-white shadow-sm">
-                    <div class="p-4">
-                        <div class="mb-3 flex items-center justify-between"><span
-                                class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-500">◌</span><span
-                                class="rounded-full bg-amber-100 px-4 py-1 text-xs font-medium text-amber-600">MEDIUM</span>
-                        </div>
-                        <h2 class="text-[14px] font-bold leading-5">Fix Navigation Menu On Mobile<br>Devices</h2>
-                        <p class="mt-2 text-xs leading-4 text-slate-500">The navigation menu doesn't
-                            collapse<br>properly on mobile devices...</p>
-                        <div class="mt-3 flex gap-1"><span
-                                class="rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-[11px] text-rose-500">◉
-                                BUG</span><span
-                                class="rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] text-amber-600">☹
-                                HELP WANTED</span></div>
-                    </div>
-                    <footer class="border-t border-slate-200 px-4 py-3 text-xs leading-6 text-slate-500">#1 by
-                        john_doe<br>1/15/2024</footer>
-                </article>
-                <article
-                    class="issue-card closed rounded-md border border-violet-200 border-t-[3px] border-t-purple-500 bg-white shadow-sm">
-                    <div class="p-4">
-                        <div class="mb-3 flex items-center justify-between"><span
-                                class="flex h-6 w-6 items-center justify-center rounded-full bg-violet-100 text-violet-500">◉</span><span
-                                class="rounded-full bg-slate-100 px-5 py-1 text-xs font-medium text-slate-400">LOW</span>
-                        </div>
-                        <h2 class="text-[14px] font-bold leading-5">Fix Navigation Menu On Mobile<br>Devices</h2>
-                        <p class="mt-2 text-xs leading-4 text-slate-500">The navigation menu doesn't
-                            collapse<br>properly on mobile devices...</p>
-                        <div class="mt-3 flex gap-1"><span
-                                class="rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-[11px] text-rose-500">◉
-                                BUG</span><span
-                                class="rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] text-amber-600">☹
-                                HELP WANTED</span></div>
-                    </div>
-                    <footer class="border-t border-slate-200 px-4 py-3 text-xs leading-6 text-slate-500">#1 by
-                        john_doe<br>1/15/2024</footer>
-                </article>
-                <article
-                    class="issue-card rounded-md border border-slate-200 border-t-[3px] border-t-emerald-500 bg-white shadow-sm">
-                    <div class="p-4">
-                        <div class="mb-3 flex items-center justify-between"><span
-                                class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-500">◌</span><span
-                                class="rounded-full bg-rose-100 px-5 py-1 text-xs font-medium text-rose-500">HIGH</span>
-                        </div>
-                        <h2 class="text-[14px] font-bold leading-5">Fix Navigation Menu On Mobile<br>Devices</h2>
-                        <p class="mt-2 text-xs leading-4 text-slate-500">The navigation menu doesn't
-                            collapse<br>properly on mobile devices...</p>
-                        <div class="mt-3 flex gap-1"><span
-                                class="rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-[11px] text-rose-500">◉
-                                BUG</span><span
-                                class="rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] text-amber-600">☹
-                                HELP WANTED</span></div>
-                    </div>
-                    <footer class="border-t border-slate-200 px-4 py-3 text-xs leading-6 text-slate-500">#1 by
-                        john_doe<br>1/15/2024</footer>
-                </article>
-                <article
-                    class="issue-card rounded-md border border-slate-200 border-t-[3px] border-t-emerald-500 bg-white shadow-sm">
-                    <div class="p-4">
-                        <div class="mb-3 flex items-center justify-between"><span
-                                class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-500">◌</span><span
-                                class="rounded-full bg-rose-100 px-5 py-1 text-xs font-medium text-rose-500">HIGH</span>
-                        </div>
-                        <h2 class="text-[14px] font-bold leading-5">Fix Navigation Menu On Mobile<br>Devices</h2>
-                        <p class="mt-2 text-xs leading-4 text-slate-500">The navigation menu doesn't
-                            collapse<br>properly on mobile devices...</p>
-                        <div class="mt-3 flex gap-1"><span
-                                class="rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-[11px] text-rose-500">◉
-                                BUG</span><span
-                                class="rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] text-amber-600">☹
-                                HELP WANTED</span></div>
-                    </div>
-                    <footer class="border-t border-slate-200 px-4 py-3 text-xs leading-6 text-slate-500">#1 by
-                        john_doe<br>1/15/2024</footer>
-                </article>
-                <article
-                    class="issue-card closed rounded-md border border-violet-200 border-t-[3px] border-t-purple-500 bg-white shadow-sm">
-                    <div class="p-4">
-                        <div class="mb-3 flex items-center justify-between"><span
-                                class="flex h-6 w-6 items-center justify-center rounded-full bg-violet-100 text-violet-500">◉</span><span
-                                class="rounded-full bg-slate-100 px-5 py-1 text-xs font-medium text-slate-400">LOW</span>
-                        </div>
-                        <h2 class="text-[14px] font-bold leading-5">Fix Navigation Menu On Mobile<br>Devices</h2>
-                        <p class="mt-2 text-xs leading-4 text-slate-500">The navigation menu doesn't
-                            collapse<br>properly on mobile devices...</p>
-                        <div class="mt-3"><span
-                                class="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[11px] text-emerald-600">✧
-                                ENHANCEMENT</span></div>
-                    </div>
-                    <footer class="border-t border-slate-200 px-4 py-3 text-xs leading-6 text-slate-500">#1 by
-                        john_doe<br>1/15/2024</footer>
-                </article>
-                <article
-                    class="issue-card rounded-md border border-slate-200 border-t-[3px] border-t-emerald-500 bg-white shadow-sm">
-                    <div class="p-4">
-                        <div class="mb-3 flex items-center justify-between"><span
-                                class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-500">◌</span><span
-                                class="rounded-full bg-amber-100 px-4 py-1 text-xs font-medium text-amber-600">MEDIUM</span>
-                        </div>
-                        <h2 class="text-[14px] font-bold leading-5">Fix Navigation Menu On Mobile<br>Devices</h2>
-                        <p class="mt-2 text-xs leading-4 text-slate-500">The navigation menu doesn't
-                            collapse<br>properly on mobile devices...</p>
-                        <div class="mt-3 flex gap-1"><span
-                                class="rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-[11px] text-rose-500">◉
-                                BUG</span><span
-                                class="rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] text-amber-600">☹
-                                HELP WANTED</span></div>
-                    </div>
-                    <footer class="border-t border-slate-200 px-4 py-3 text-xs leading-6 text-slate-500">#1 by
-                        john_doe<br>1/15/2024</footer>
-                </article>
-                <article
-                    class="issue-card rounded-md border border-slate-200 border-t-[3px] border-t-emerald-500 bg-white shadow-sm">
-                    <div class="p-4">
-                        <div class="mb-3 flex items-center justify-between"><span
-                                class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-500">◌</span><span
-                                class="rounded-full bg-rose-100 px-5 py-1 text-xs font-medium text-rose-500">HIGH</span>
-                        </div>
-                        <h2 class="text-[14px] font-bold leading-5">Fix Navigation Menu On Mobile<br>Devices</h2>
-                        <p class="mt-2 text-xs leading-4 text-slate-500">The navigation menu doesn't
-                            collapse<br>properly on mobile devices...</p>
-                        <div class="mt-3 flex gap-1"><span
-                                class="rounded-full border border-rose-200 bg-rose-50 px-2 py-0.5 text-[11px] text-rose-500">◉
-                                BUG</span><span
-                                class="rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[11px] text-amber-600">☹
-                                HELP WANTED</span></div>
-                    </div>
-                    <footer class="border-t border-slate-200 px-4 py-3 text-xs leading-6 text-slate-500">#1 by
-                        john_doe<br>1/15/2024</footer>
-                </article>
-            </div>
+            <div class="grid grid-cols-1 gap-3 p-6 sm:grid-cols-2 lg:grid-cols-4" id="article-container"></div>
         </section>
     </main>
+
+
+
+   <script src="index.js"></script>
 </body>
 
 </html>
